@@ -3,35 +3,22 @@ import React from "react";
 const Navbar = () => {
   return (
     <div style={{ backgroundColor: "#333333", height: "4em" }}>
-      <nav style={{ paddingTop: 20 }}>
+      <nav style={{ paddingTop: 22 }}>
         <ul
           style={{
             display: "flex",
-            justifyContent: "space-evenly",
             listStyle: "none",
+            paddingLeft: "6em",
           }}
         >
-          <li>
-            <a style={{ textDecoration: "none", color: "white" }} href="/">
-              Your Logo
-            </a>
-          </li>
           <li>
             <a style={{ textDecoration: "none", color: "white" }} href="/">
               Home
             </a>
           </li>
-          <li>
-            <a style={{ textDecoration: "none", color: "white" }} href="/about">
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              style={{ textDecoration: "none", color: "white" }}
-              href="/contact"
-            >
-              Contact
+          <li style={{ paddingLeft: "2em" }}>
+            <a style={{ textDecoration: "none", color: "white" }} href="/">
+              Cars
             </a>
           </li>
         </ul>
