@@ -1,5 +1,4 @@
 import React from "react";
-import CarInfo from "./CarInfo";
 
 const Card = (props) => {
   const { title, description } = props;
@@ -16,7 +15,6 @@ const Card = (props) => {
       <div style={{ marginTop: 600 }}></div>
       <h1 style={{ fontSize: "4em", marginBottom: 8 }}>{title}</h1>
       <h2>{description}</h2>
-      <CarInfo />
     </div>
   );
 };
