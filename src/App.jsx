@@ -1,6 +1,5 @@
 import Navbar from "./components/NavBar";
 import Card from "./components/Card";
-import CarInfo from "./components/CarInfo";
 
 function App() {
   return (
