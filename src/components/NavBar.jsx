@@ -22,9 +22,6 @@ const Navbar = () => {
           <li style={{ paddingLeft: "2em" }}>
             <button>About</button>
           </li>
-          <li style={{ paddingLeft: "2em" }}>
-            <button>buttont</button>
-          </li>
         </ul>
       </nav>
     </div>
