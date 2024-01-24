@@ -19,6 +19,9 @@ const Navbar = () => {
           <li style={{ paddingLeft: "2em" }}>
             <button onClick={() => navigate("/cars")}>Cars</button>
           </li>
+          <li style={{ paddingLeft: "2em" }}>
+            <button>About</button>
+          </li>
         </ul>
       </nav>
     </div>
