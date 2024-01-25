@@ -16,17 +16,26 @@ const CarInfo = () => {
 
     fetchData();
   }, []);
-  console.log(data);
   return data ? (
-    data.map((e, index) => (
-      <div key={index} style={{ marginBottom: "2em" }}>
-        <h1 style={{ color: "red" }}>{e.model}</h1>
-        <p style={{ color: "red" }}>{e.maker}</p>
-        <p style={{ color: "red" }}>{e.year}</p>
-        <p style={{ color: "red" }}>{`R$:${e.price}`}</p>
-        <p style={{ color: "red" }}>{e.ownerName}</p>
-      </div>
-    ))
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        textAlign: "center",
+        justifyContent: "space-evenly",
+      }}
+    >
+      {data.map((e, index) => (
+        <div key={index} style={{ marginRight: "2em" }}>
+          <h1 style={{ color: "red" }}>{e.model}</h1>
+          <p style={{ color: "red" }}>{e.maker}</p>
+          <p style={{ color: "red" }}>{e.year}</p>
+          <p style={{ color: "red" }}>{`R$:${e.price}`}</p>
+          <p style={{ color: "red" }}>{e.ownerName}</p>
+        </div>
+      ))}
+    </div>
   ) : (
     <p>Loading...</p>
   );

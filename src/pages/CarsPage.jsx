@@ -4,11 +4,11 @@ import Navbar from "../components/NavBar";
 
 const CarsPage = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "#000000", height: "100vh" }}>
       <div>
         <Navbar />
       </div>
-      <div style={{ backgroundColor: "#000000", height: "calc(100vh - 4em)" }}>
+      <div>
         <CarInfo />
       </div>
     </div>
