@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CarInfo = () => {
   const [data, setData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,7 +34,12 @@ const CarInfo = () => {
           <p style={{ color: "red" }}>{e.maker}</p>
           <p style={{ color: "red" }}>{e.year}</p>
           <p style={{ color: "red" }}>{`R$:${e.price}`}</p>
-          <p style={{ color: "red" }}>{e.ownerName}</p>
+          <p
+            onClick={() => navigate(`/owner/${e.ownerName}`)}
+            style={{ color: "red" }}
+          >
+            {e.ownerName}
+          </p>
         </div>
       ))}
     </div>
