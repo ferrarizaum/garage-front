@@ -26,10 +26,16 @@ const CarInfo = () => {
         flexWrap: "wrap",
         textAlign: "center",
         justifyContent: "space-evenly",
+        backgroundColor: "white",
       }}
     >
       {data.map((e, index) => (
         <div key={index} style={{ marginRight: "2em" }}>
+          <img
+            style={{ backgroundColor: "white" }}
+            alt="Car"
+            src="/icon/car_png.png"
+          ></img>
           <h1 style={{ color: "red" }}>{e.model}</h1>
           <p style={{ color: "red" }}>{e.maker}</p>
           <p style={{ color: "red" }}>{e.year}</p>
