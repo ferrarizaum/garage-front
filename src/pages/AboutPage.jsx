@@ -7,7 +7,10 @@ const AboutPage = () => {
       <div>
         <Navbar />
       </div>
-      <div></div>
+      <div>
+        <h1 style={{ color: "red" }}>About The Garage :</h1>
+        <h2 style={{ color: "red" }}>Under Development by José Ferrari</h2>
+      </div>
     </div>
   );
 };

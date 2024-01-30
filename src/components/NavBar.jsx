@@ -52,7 +52,7 @@ const Navbar = () => {
           </li>
           <li style={{ paddingLeft: "2em" }}>
             <button style={buttonStyle} onClick={() => navigate("/login")}>
-              LogIn
+              Log-In
             </button>
           </li>
         </ul>
