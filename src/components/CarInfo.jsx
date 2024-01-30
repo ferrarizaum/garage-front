@@ -34,10 +34,12 @@ const CarInfo = () => {
             style={{
               backgroundColor: "white",
               padding: "2em",
+              borderRadius: 5,
             }}
             alt="Car"
             src="/icon/car_png.png"
           ></img>
+
           <h1 style={{ color: "red" }}>{e.model}</h1>
           <p style={{ color: "red" }}>{e.maker}</p>
           <p style={{ color: "red" }}>{e.year}</p>
