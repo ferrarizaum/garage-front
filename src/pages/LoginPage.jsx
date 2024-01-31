@@ -9,7 +9,7 @@ const LoginPage = () => {
       <div>
         <Navbar />
       </div>
-      <div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <h2 style={{ color: "red" }}>Login</h2>
         <form>
           <label style={{ color: "red" }}>Email:</label>
