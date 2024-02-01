@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 
-const CarInfo = () => {
+const CarInfo = (props) => {
   const [data, setData] = useState(null);
-  const navigate = useNavigate();
-
+  const { model } = props;
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -18,6 +16,9 @@ const CarInfo = () => {
 
     fetchData();
   }, []);
+
+  const correctCar = data ? data.filter((e) => e.model === model) : null;
+
   return data ? (
     <div
       style={{
@@ -28,30 +29,25 @@ const CarInfo = () => {
         justifyContent: "space-evenly",
       }}
     >
-      {data.map((e, index) => (
-        <div key={index} style={{ marginRight: "2em", marginTop: "2em" }}>
-          <img
-            style={{
-              backgroundColor: "white",
-              padding: "2em",
-              borderRadius: 5,
-            }}
-            alt="Car"
-            src="/icon/car_png.png"
-          ></img>
-
-          <h1 style={{ color: "red" }}>{e.model}</h1>
-          <p style={{ color: "red" }}>{e.maker}</p>
-          <p style={{ color: "red" }}>{e.year}</p>
-          <p style={{ color: "red" }}>{`R$:${e.price}`}</p>
-          <p
-            onClick={() => navigate(`/owner/${e.ownerName}`)}
-            style={{ color: "red" }}
-          >
-            {e.ownerName}
-          </p>
-        </div>
-      ))}
+      <div style={{ marginRight: "2em", marginTop: "2em" }}>
+        <img
+          style={{
+            backgroundColor: "white",
+            padding: "2em",
+            borderRadius: 5,
+          }}
+          alt="Car"
+          src="/icon/car_png.png"
+        ></img>
+        {correctCar.map((e) => (
+          <div key={e.id}>
+            <h1 style={{ color: "red" }}>{e.model}</h1>
+            <p style={{ color: "red" }}>{e.maker}</p>
+            <p style={{ color: "red" }}>{e.year}</p>
+            <p style={{ color: "red" }}>{`R$:${e.price}`}</p>
+          </div>
+        ))}
+      </div>
     </div>
   ) : (
     <p>Loading...</p>
