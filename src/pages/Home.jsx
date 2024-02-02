@@ -17,7 +17,11 @@ const Home = () => {
 
     fetchData();
   }, []);
-  console.log(data);
+
+  const getRandomNumber = () => Math.random() - 0.5;
+
+  const shuffledData = data?.slice().sort(getRandomNumber);
+
   return data ? (
     <div style={{ backgroundColor: "#000000", height: "100vh" }}>
       <div>
@@ -31,7 +35,7 @@ const Home = () => {
           alignItems: "center",
         }}
       >
-        {data.map((e) => (
+        {shuffledData.map((e) => (
           <div style={{ padding: "2em" }} key={e.id}>
             <Card model={e.model} description={e.description} />
           </div>

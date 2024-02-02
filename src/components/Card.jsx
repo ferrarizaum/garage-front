@@ -17,8 +17,12 @@ const Card = (props) => {
           flexDirection: "column",
         }}
       >
-        <h1 style={{ fontSize: "4em" }}>{model}</h1>
-        <h2>{description}</h2>
+        <div>
+          <h1 style={{ fontSize: "4em" }}>{model}</h1>
+        </div>
+        <div style={{ margin: 8 }}>
+          <h2>{description}</h2>
+        </div>
       </div>
     </div>
   );
