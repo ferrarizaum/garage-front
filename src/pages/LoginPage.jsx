@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import Navbar from "../components/NavBar";
+import Navbar, { buttonStyle } from "../components/NavBar";
+
+const buttonStyleLoginPage = {
+  backgroundColor: "#333333",
+};
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -9,25 +13,54 @@ const LoginPage = () => {
       <div>
         <Navbar />
       </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <h2 style={{ color: "red" }}>Login</h2>
-        <form>
-          <label style={{ color: "red" }}>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <br />
-          <label style={{ color: "red" }}>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <br />
-          <button type="button">Login</button>
-        </form>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ padding: "1em" }}>
+          <h2 style={{ color: "red", fontSize: 24 }}>Login</h2>
+        </div>
+        <div>
+          <form>
+            <div style={{ padding: "1em" }}>
+              <div>
+                <label style={{ color: "red" }}>Email:</label>
+              </div>
+              <div>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+            </div>
+            <div style={{ padding: "1em" }}>
+              <div>
+                <label style={{ color: "red" }}>Password:</label>
+              </div>
+              <div>
+                <input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+            </div>
+            <div style={{ padding: "1em" }}>
+              <button
+                style={{ ...buttonStyle, ...buttonStyleLoginPage }}
+                type="button"
+              >
+                Login
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   );
