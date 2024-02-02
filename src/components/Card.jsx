@@ -20,7 +20,7 @@ const Card = (props) => {
         <div>
           <h1 style={{ fontSize: "4em" }}>{model}</h1>
         </div>
-        <div style={{ margin: 8 }}>
+        <div style={{ marginTop: 8 }}>
           <h2>{description}</h2>
         </div>
       </div>

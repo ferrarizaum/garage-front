@@ -35,8 +35,8 @@ const Home = () => {
           alignItems: "center",
         }}
       >
-        {shuffledData.map((e) => (
-          <div style={{ padding: "2em" }} key={e.id}>
+        {shuffledData.slice(0, 4).map((e) => (
+          <div style={{ padding: "4em" }} key={e.id}>
             <Card model={e.model} description={e.description} />
           </div>
         ))}
