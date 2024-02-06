@@ -7,9 +7,20 @@ const AboutPage = () => {
       <div>
         <Navbar />
       </div>
-      <div>
-        <h1 style={{ color: "red" }}>About The Garage :</h1>
-        <h2 style={{ color: "red" }}>Under Development by José Ferrari</h2>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          textAlign: "center",
+          marginTop: "8em",
+        }}
+      >
+        <div>
+          <h1 style={{ color: "red" }}>About The Garage :</h1>
+        </div>
+        <div style={{ marginTop: "2em" }}>
+          <h2 style={{ color: "red" }}>Under Development by José Ferrari</h2>
+        </div>
       </div>
     </div>
   );

@@ -33,6 +33,7 @@ const LoginPage = () => {
               </div>
               <div>
                 <input
+                  style={{ borderRadius: "5px" }}
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -45,6 +46,7 @@ const LoginPage = () => {
               </div>
               <div>
                 <input
+                  style={{ borderRadius: "5px" }}
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
