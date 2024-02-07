@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import Navbar, { buttonStyle } from "../components/NavBar";
 
-const buttonStyleLoginPage = {
-  backgroundColor: "#333333",
-};
-
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -22,46 +18,51 @@ const LoginPage = () => {
           textAlign: "center",
         }}
       >
-        <div style={{ padding: "1em" }}>
-          <h2 style={{ color: "red", fontSize: 24 }}>Login</h2>
-        </div>
-        <div>
-          <form>
-            <div style={{ padding: "1em" }}>
-              <div>
-                <label style={{ color: "red" }}>Email:</label>
+        <div
+          style={{
+            backgroundColor: " #333333",
+            marginTop: "8em",
+            borderRadius: 5,
+          }}
+        >
+          <div style={{ padding: "1em" }}>
+            <h2 style={{ color: "red", fontSize: 24 }}>Login</h2>
+          </div>
+          <div>
+            <form>
+              <div style={{ padding: "1em" }}>
+                <div>
+                  <label style={{ color: "red" }}>Email:</label>
+                </div>
+                <div>
+                  <input
+                    style={{ borderRadius: "5px" }}
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
               </div>
-              <div>
-                <input
-                  style={{ borderRadius: "5px" }}
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+              <div style={{ padding: "1em" }}>
+                <div>
+                  <label style={{ color: "red" }}>Password:</label>
+                </div>
+                <div>
+                  <input
+                    style={{ borderRadius: "5px" }}
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
               </div>
-            </div>
-            <div style={{ padding: "1em" }}>
-              <div>
-                <label style={{ color: "red" }}>Password:</label>
+              <div style={{ padding: "1em" }}>
+                <button style={{ ...buttonStyle }} type="button">
+                  Login
+                </button>
               </div>
-              <div>
-                <input
-                  style={{ borderRadius: "5px" }}
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </div>
-            </div>
-            <div style={{ padding: "1em" }}>
-              <button
-                style={{ ...buttonStyle, ...buttonStyleLoginPage }}
-                type="button"
-              >
-                Login
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>

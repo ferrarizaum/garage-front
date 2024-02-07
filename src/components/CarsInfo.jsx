@@ -51,7 +51,7 @@ const CarsInfo = () => {
           <p style={{ color: "red" }}>{`R$:${e.price}`}</p>
           <p
             onClick={() => navigate(`/owner/${e.ownerName}`)}
-            style={{ color: "red" }}
+            style={{ color: "red", cursor: "pointer" }}
           >
             {e.ownerName}
           </p>
