@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 const OwnerInfo = (props) => {
   const [data, setData] = useState(null);
   const { ownerName } = props;
-  console.log(ownerName);
   useEffect(() => {
     const fetchData = async () => {
       try {
