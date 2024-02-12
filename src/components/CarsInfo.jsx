@@ -32,12 +32,14 @@ const CarsInfo = () => {
         <div key={index} style={{ marginRight: "2em", marginTop: "2em" }}>
           <img
             style={{
+              width: 200,
+              height: 200,
               backgroundColor: "white",
-              padding: "2em",
+              padding: 1,
               borderRadius: 5,
             }}
             alt="Car"
-            src="/icon/car_png.png"
+            src={e.image}
           ></img>
 
           <h1

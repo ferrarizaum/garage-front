@@ -39,11 +39,14 @@ const Card = () => {
           {shuffledData.slice(0, 4).map((e) => (
             <div
               style={{
+                height: "75vh",
                 width: "25%",
                 padding: "4em",
+                margin: "1em",
                 backgroundImage: `url(${e.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
               }}
               key={e.id}
             >
