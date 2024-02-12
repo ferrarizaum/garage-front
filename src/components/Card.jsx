@@ -37,7 +37,16 @@ const Card = () => {
       >
         <div style={{ display: "flex" }}>
           {shuffledData.slice(0, 4).map((e) => (
-            <div style={{ padding: "4em" }} key={e.id}>
+            <div
+              style={{
+                width: "25%",
+                padding: "4em",
+                backgroundImage: `url(${e.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+              key={e.id}
+            >
               <div>
                 <h1 style={{ fontSize: "4em" }}>{e.model}</h1>
               </div>
