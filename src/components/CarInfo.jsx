@@ -52,6 +52,7 @@ const CarInfo = (props) => {
       </div>
     </div>
   ) : (
+    //test
     <p>Loading...</p>
   );
 };
