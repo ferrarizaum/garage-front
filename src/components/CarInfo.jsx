@@ -30,17 +30,19 @@ const CarInfo = (props) => {
       }}
     >
       <div style={{ marginRight: "2em", marginTop: "2em" }}>
-        <img
-          style={{
-            backgroundColor: "white",
-            padding: "2em",
-            borderRadius: 5,
-          }}
-          alt="Car"
-          src="/icon/car_png.png"
-        ></img>
         {correctCar.map((e) => (
           <div key={e.id}>
+            <img
+              style={{
+                width: 500,
+                height: 500,
+                backgroundColor: "white",
+                padding: "1em",
+                borderRadius: 5,
+              }}
+              alt="Car"
+              src={e.image}
+            ></img>
             <h1 style={{ color: "red" }}>{e.model}</h1>
             <p style={{ color: "red" }}>{e.maker}</p>
             <p style={{ color: "red" }}>{e.year}</p>

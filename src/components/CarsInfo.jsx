@@ -44,7 +44,7 @@ const CarsInfo = () => {
 
           <h1
             onClick={() => navigate(`/car/${e.model}`)}
-            style={{ color: "red" }}
+            style={{ color: "red", cursor: "pointer" }}
           >
             {e.model}
           </h1>
