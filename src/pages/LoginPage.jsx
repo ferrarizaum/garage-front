@@ -4,6 +4,38 @@ import Navbar, { buttonStyle } from "../components/NavBar";
 const LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleLogin = async () => {
+    try {
+      const response = await fetch("http://localhost:8190/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        const token = data.token;
+
+        sessionStorage.setItem("authToken", token);
+
+        // handle successful login
+        console.log("Login successful:", data);
+      } else {
+        // handle login error
+        const errorData = await response.json();
+        console.error("Login error:", errorData.message);
+      }
+    } catch (error) {
+      console.error("Fetch error:", error.message);
+    }
+  };
+
   return (
     <div style={{ backgroundColor: "#000000", height: "100vh" }}>
       <div>
@@ -57,7 +89,11 @@ const LoginPage = () => {
                 </div>
               </div>
               <div style={{ padding: "1em" }}>
-                <button style={{ ...buttonStyle }} type="button">
+                <button
+                  onClick={handleLogin}
+                  style={{ ...buttonStyle }}
+                  type="button"
+                >
                   Login
                 </button>
               </div>

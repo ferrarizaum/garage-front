@@ -1,5 +1,4 @@
 import React from "react";
-import CarInfo from "../components/CarsInfo";
 import Navbar from "../components/NavBar";
 import CarsInfo from "../components/CarsInfo";
 
