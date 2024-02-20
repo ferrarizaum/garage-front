@@ -23,6 +23,7 @@ const LoginPage = () => {
         const token = data.token;
 
         sessionStorage.setItem("authToken", token);
+        sessionStorage.setItem("name", data.name);
 
         // handle successful login
         console.log("Login successful:", data);

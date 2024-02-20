@@ -55,6 +55,9 @@ const Navbar = () => {
               Log-In
             </button>
           </li>
+          <li style={{ paddingLeft: "2em" }}>
+            <p>Logged In as :{sessionStorage.getItem("name")}</p>
+          </li>
         </ul>
       </nav>
     </div>
